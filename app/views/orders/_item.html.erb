@@ -1,0 +1,20 @@
+<tr>
+  <td>
+    <%= image_tag product.image.tiny.url %>
+  </td>
+  <td>
+    <h5><%= link_to product.name, "/products/#{product.id}" %></h5>
+    <p class="fs-6"><%= product.description %></p>
+  </td>
+  <td>
+    <%= humanized_money_with_symbol product.price %>
+  </td>
+  <td>
+    <div>
+    <%= quantity %>
+    </div>
+  </td>
+  <td>
+    <%= humanized_money_with_symbol product.price * quantity %>
+  </td>
+</tr>
