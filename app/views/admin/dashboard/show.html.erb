@@ -6,15 +6,31 @@
 
   <div class="panel panel-default products">
 
-    <div class="card" style="width: 18rem;">
+    <!-- <div class="card" style="width: 18rem;">
       <div class="card-header">
         Statistics
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Products: <%= @product_count %></li>
+        <li class="list-group-item">Products: <%= link_to @product_count, "/products" %></li>
         <li class="list-group-item">Categories: <%= @category_count %></li>
       </ul>
-    </div>
+    </div> -->
+
+    <table class="table table-hover table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th colspan="2">Statistics</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Products in DB:</td>
+        <td><%= link_to @product_count, "/products" %></td>
+      </tr>
+      <tr>
+        <td>Categories in DB:</td>
+        <td><%= @category_count %></td>
+      </tr>
+    </table>
 
   </div>
 
