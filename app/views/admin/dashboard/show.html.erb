@@ -27,6 +27,10 @@
         <td><%= link_to @product_count, [:admin, :products] %></td>
       </tr>
       <tr>
+        <td>&emsp;> Total inventory:</td>
+        <td><%= @product_quantity_count %></td>
+      </tr>
+      <tr>
         <td>Categories in DB:</td>
         <td><%= @category_count %></td>
       </tr>
