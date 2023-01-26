@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get '/about', to: "about#index"
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
@@ -18,6 +20,11 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
     resources :categories, only: [:index, :new, :create]
   end
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
+  get '/about', to: "about#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
