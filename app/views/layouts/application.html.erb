@@ -25,7 +25,16 @@
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Help</a></li>
       <li class="nav-item"><%= link_to "About", [:about], class: "nav-link" %></li>
     </ul>
-    <p class="text-center text-muted">© 2021 Jungle, Inc</p>
+    <p class="text-center text-muted">© 2023 Jungle, Inc</p>
+    <div class="fs-6 fst-italic text-center">
+      <% if current_user %>
+        Signed in as: <%= current_user.email %> | 
+        <%= link_to 'Logout', [:logout] %>
+      <% else %>
+        <%= link_to "Login", [:login] %> | 
+        <%= link_to "Signup", [:signup] %>
+      <% end %>
+    </div>
   </footer>
 </body>
 </html>
