@@ -23,16 +23,16 @@
         </tr>
       </thead>
       <tr>
-        <td>Products in DB:</td>
+        <td>Categories in DB</td>
+        <td><%= link_to @category_count, [:admin, :categories]  %></td>
+      </tr>
+      <tr>
+        <td>Products in DB</td>
         <td><%= link_to @product_count, [:admin, :products] %></td>
       </tr>
       <tr>
-        <td>&emsp;> Total inventory:</td>
+        <td>Total Product Inventory</td>
         <td><%= @product_quantity_count %></td>
-      </tr>
-      <tr>
-        <td>Categories in DB:</td>
-        <td><%= @category_count %></td>
       </tr>
     </table>
 
