@@ -39,7 +39,15 @@ RSpec.describe User, type: :model do
     end
 
     it "must require email, and first and last names" do
-      
+      @user = User.new
+      expect(@user.save).to be false
+    end
+
+    it "must fail if password does not meet minimum length" do
+      @user = User.new(first_name: "Tai", last_name: "Delisle", email: "tai@tai.tai", password: "p", password_confirmation: "p")
+      @user.save
+
+      expect(@user.errors.full_messages).to include("Password is too short (minimum is 3 characters)")
     end
 
   end
