@@ -77,5 +77,12 @@ RSpec.describe User, type: :model do
       expect(User.authenticate_with_credentials("tai@TAI.tai", "password")).to be_truthy
     end
 
+    it "should log in when email has extra spaces" do
+      @user = User.new(first_name: "Tai", last_name: "Delisle", email: "tai@tai.tai", password: "password", password_confirmation: "password")
+      @user.save
+
+      expect(User.authenticate_with_credentials(" tai@TAI.tai  ", "password")).to be_truthy
+    end
+
   end
 end
