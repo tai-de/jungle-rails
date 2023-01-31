@@ -4,6 +4,13 @@
     <h1>Login</h1>
   </header>
 
+  <% flash.each do |type, msg|
+    puts msg %>
+    <div class="alert alert-danger" role="alert">
+      <%= msg %>
+    </div>
+  <% end %>
+
   <%= form_tag '/login' do %>
 
     <div class="mb-3">
