@@ -1,6 +1,39 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example. This is a 'completed' version after completing Lighthouse Labs' activities to improve the usability and functionality of the application.
+
+## Features
+
+Implemented/improved features: (as compared to the [template](https://github.com/tai-de/jungle-rails#:~:text=lighthouse%2Dlabs/jungle%2Drails))
+
+### Basic functionality
+
+* About Us page created
+* "Sold Out" badge on product cards/display page
+* Empty cart banner / hide actual cart table if 0 items present
+* Order details displays product info/quantity/etc
+* Price info aligned with correct formatting
+* User authentication implemented
+
+### Admin functionality
+
+* HTTP basic authentication prevents access to Admin interface (credentials set up in .env file)
+* Admin Dashboard displays category/product/inventory counts
+* Admins can create new categories for products
+
+### Testing / specs integration
+
+* RSpec model tests
+* Cypress user tests
+
+## Screenshots
+
+!["Jungle home"](/screenshots/jungle_home.png)
+!["Jungle products"](/screenshots/jungle_products.png)
+!["Jungle order"](/screenshots/jungle_order.png)
+!["Jungle admin dash"](/screenshots/jungle_admin.png)
+!["Jungle admin products"](/screenshots/jungle_admin_products.png)
+!["Jungle admin new"](/screenshots/jungle_admin_new.png)
 
 ## Setup
 
